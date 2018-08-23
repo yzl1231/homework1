@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>practice</title>
+	<link rel="stylesheet" type="text/css" href="../css/practice.css">
+	<script type="text/javascript" src="../js/practice.js"></script>
+</head>
+<body>
+    <div id="tab">
+    	<h2>考勤管理系统</h2>
+    	<a href="#">退出登录</a>
+    </div>
+    <div id="tab-left">
+    	 <ul id="ul1">
+    	 	<li >
+    	 	    <img class="geren" src="../pictures/1.png">
+    	 		<span>个人中心</span>
+    	 	</li>
+    	 	<li >
+    	 	    <img class="geren" src="../pictures/2.png">
+    	 		<span>打卡</span>
+    	 	</li>
+    	</ul>
+    	<ul id="ul11">
+    	 	<li id="list1">
+    	 	    <img class="geren" src="../pictures/3.png">
+    	 	    <a href="javascript:void(0);">
+    	 		    <span>假勤申请</span> 
+    	 		    <span>&gt</span>
+    	 		</a>
+    	 	</li>
+    	</ul>
+    	 	<!-- <li id="cont" style="display: none;">
+    	 		<span >请假申请</span>
+    	 	</li>
+    	 	<li id="cont" style="display: none;">
+    	 		<span >出差申请</span>
+    	 	</li>
+    	 	<li id="cont" style="display: none;">
+    	 		<span >申请进度</span>
+    	 	</li> -->
+
+    	 </ul>
+    	 <ul id="ul2" style="display: none;">
+    	 	<li  >
+    	 		<span >请假申请</span>
+    	 	</li>
+    	 	<li  >
+    	 		<span >出差申请</span>
+    	 	</li>
+    	 	<li  >
+    	 		<span >申请进度</span>
+    	 	</li>
+    	 </ul>
+    	 <!-- <img src="../pictures/2.png"> -->
+    </div>
+    <div id="content1">
+        <div id="con-right1" style="display: block;">
+            <img src="../pictures/7.png">
+            <span id="span1">admin</span>
+    	    <table>
+    		    <tr id="td1">
+    			    <th>
+    				    <span class="span2">员工编号：</span>
+    				    <input class="input1" value="2" readonly="readonly">
+    			    </th>
+    		    </tr>
+    		    <tr>
+    			    <th>
+    				    <span class="span2">部门：</span>
+                        <select class="select1" >
+                    	    <option>人力资源部</option>
+                    	    <option>财务部</option>
+                    	    <option>生产技术部</option>
+                    	    <option>营销部</option>
+                    	    <option>行政部</option>
+                        </select>
+    			    </th>
+    		    </tr>
+    		    <tr id="td1">
+    			    <th>
+    				    <span class="span2">性别：</span>
+    				    <input class="input3" name="gender" type="radio" checked="checked">
+    				    <span class="span3">男</span>
+    				    <input class="input3" name="gender"	 type="radio">
+    				    <span class="span3">女</span>
+
+    			    </th>
+    		    </tr>
+    		    <tr>
+    			    <th>
+    				    <span class="span2">婚姻状况：</span>
+    				    <input class="input3" name="marriage" type="radio" checked="checked">
+    				    <span class="span3">已婚</span>
+    				    <input class="input3" name="marriage"	 type="radio">
+    				    <span class="span3">未婚</span>
+    			    </th>
+    		    </tr>
+    		    <tr id="td1">
+    			    <th>
+    				    <span class="span2">联系电话：</span>
+    				    <input class="input4" type="text" name="phoneNumber" value="vubuino">
+    			    </th>
+    		    </tr>
+    		    <tr>
+    			    <th>
+    				    <span class="span2">电子邮箱：</span>
+    				    <input class="input4" type="text" name="email" value="vubuino">
+    			    </th>
+    		    </tr>
+    	    </table>
+    	    <input class="input5" type="submit"  value="保         存"> 
+    	    <input class="input6" type="submit"  value="修 改 资 料">
+        </div>
+        <div id="con-right2" style="display: none;">
+    	    <h3 class="top_date_name">今天是：</h3>
+    	    <h3 id="top_date" class="top_date"></h3>
+    	    <hr class="top_hr" />
+    	    <span id="join">上班打卡</span>
+    	    <span id="join_time"></span>
+    	    <span id="Return">下班打卡</span>
+    	    <span id="return_time"></span>
+    	    <hr class="top_hr2" />
+        </div>
+    </div>
+    <div id="content2">
+    	<div id="con-right3" style="display: none;">
+    		<h3 class="top_date_name">请假申请</h3>
+    		<hr class="top_hr" />
+    		<span id="applicant" class="model">申请人：</span>
+    		<span id="applicant_name" class="model_name"></span>
+    		<span id="number" class="model">员工编号：</span>
+    		<span id="number_write" class="model_name"></span>
+    		<span id="section" class="model">就职部门：</span>
+    		<span id="section_name" class="model_name"></span>
+    		<span id="start" class="time">开始时间：</span>
+    		<input id="start_time" class="timeInput">
+    		<span id="end" class="time2">结束时间：</span>
+    		<input id="end_time" class="timeInput2">
+    		<input class="choice1" name="marriage" type="radio" >
+    		<span class="choice_one">事假</span>
+    		<input class="choice2" name="marriage" type="radio">
+    		<span class="choice_two">病假</span>
+    		<form action="#">
+    		    <span class="reson">请假事由：</span>
+    		    <input class="resons" type="text" name="resons">
+    		    <input class="submit" type="submit" value="提交">
+    		</form>
+    		<input class="choice" name="specil" type="radio" >
+    		<span class="choice_three">紧急事务，望上级尽快批准</span>
+    	</div>
+    	<div id="con-right4" style="display: none;">
+    		<h3 class="top_date_name">请假申请</h3>
+    		<hr class="top_hr" />
+    		<span id="applicant" class="model">申请人：</span>
+    		<span id="applicant_name" class="model_name"></span>
+    		<span id="number" class="model">员工编号：</span>
+    		<span id="number_write" class="model_name"></span>
+    		<span id="section" class="model">就职部门：</span>
+    		<span id="section_name" class="model_name"></span>
+    		<span id="place" class="place">出差地点：</span>
+    		<input id="place_where" class="place_where">
+    		<span id="start" class="start">开始时间：</span>
+    		<input id="start_time" class="timeInput3">
+    		<span id="end" class="end">结束时间：</span>
+    		<input id="end_time" class="timeInput4">
+    		<form action="#">
+    		    <span class="reson">出差事由：</span>
+    		    <input class="resons" type="text" name="resons">
+    		    <input class="submit" type="submit" value="提交">
+    		</form>
+    		<input class="choice" name="specil" type="radio" >
+    		<span class="choice_three">紧急事务，望上级尽快批准</span>
+    	</div>
+    	<div id="con-right5" style="display: none;">
+    		<h3 class="top_date_name">申请进度</h3>
+    		<hr class="top_hr" />
+    		<table id="app" class="app">
+    			<tr>
+    				<th>
+    					<span class="bushi">提交申请时间</span>
+    				</th>
+    				<th>
+    					<span class="bushi">申请类别</span>
+    				</th>
+    				<th>
+    					<span class="bushi">申请情况</span>
+    				</th>
+    				<th>
+    					<span class="bushi">审核人</span>
+    				</th>
+    			</tr>
+    			<tr>
+    				<th>
+    					<span class="bushi">csa</span>
+    				</th>
+    				<th>
+    					<span class="bushi">申ccsacsacsa</span>
+    				</th>
+    				<th>
+    					<span class="bushi">申请</span>
+    				</th>
+    				<th>
+    					<span class="bushi">审核人csac</span>
+    				</th>
+    			</tr>
+    			<tr>
+    				<th>
+    					
+    				</th>
+    				<th>
+    					
+    				</th>
+    				<th>
+    					
+    				</th>
+    				<th>
+    					
+    				</th>
+    			</tr>
+    			<tr>
+    				<th>
+    					
+    				</th>
+    				<th>
+    					
+    				</th>
+    				<th>
+    					
+    				</th>
+    				<th>
+    					
+    				</th>
+    			</tr>
+    		</table>
+    	</div>
+    </div>
+</body>
+</html>
