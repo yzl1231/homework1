@@ -1,0 +1,237 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>考勤管理系统</title>
+	<link rel="stylesheet" type="text/css" href="css/考勤管理.css">
+	<script type="text/javascript" src="js/考勤管理.js"></script>
+</head>
+<body>
+
+
+	<div id="top">
+		<h2>考勤管理系统</h2>
+	</div>
+<!-- 登录界面 -->
+<div id="before" style="display: none;">
+	<div id="main">
+		<img src="images/loadin.jpg" alt="loadin">
+		<div id="loadin">
+			<div id="loadin_top">
+				<h3>用户登录</h3>
+			</div>
+			<div id="loadin_con">
+				<form>
+					<span>用户名：</span><input type="text" class="text"><a href="#">注册账号</a><br>
+					<span>密&nbsp;&nbsp;&nbsp;码：</span><input type="text" class="text"><a href="#">找回密码</a><br>
+					<button class="btn">登录</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 登录后 左边导航条-->
+<div id="tab-left">
+	<ul>
+		<li class="check">
+			<div class="dif"><strong></strong><p>查看相应情况</p><span>&gt</span></div>
+			<ul id="nav" style="display: none;">
+				<li class="active">打卡情况</li>
+				<li>请假情况</li>
+				<li>出差情况</li>
+			</ul>
+		</li>
+		<li class="leave"><strong></strong><p>请假审核</p></li>
+		<li class="leave" id="trip"><strong></strong><p>出差审核</p></li>
+	</ul>
+</div>
+<!-- 登录后 右边导航条-->
+<div id="tab-right">
+	<div id="checkin">
+		<!-- 打卡情况 -->
+		<div class="clockin">
+			<div class="box">全部打卡情况</div>
+			<div class="clockin-table">
+				<table width="100%">
+					<tr>
+						<th>员工编号</th>
+						<th>日期</th>
+						<th>姓名</th>
+						<th>上班时间</th>
+						<th>下班时间</th>
+						<th>打卡情况</th>
+					</tr>
+					<tr align="center">
+						<td>2</td>
+						<td>2018-8-2</td>
+						<td>lin</td>
+						<td>8:00</td>
+						<td>18:00</td>
+						<td>旷工</td>
+					</tr>
+					<tr align="center">
+						<td>2</td>
+						<td>8-2</td>
+						<td>lin</td>
+						<td>8:00</td>
+						<td>18:00</td>
+						<td>旷工</td>
+					</tr>
+					<tr align="center">
+						<td>2</td>
+						<td>8-2</td>
+						<td>lin</td>
+						<td>8:00</td>
+						<td>18:00</td>
+						<td>旷工</td>
+					</tr>
+					<tr align="center">
+						<td>2</td>
+						<td>8-2</td>
+						<td>lin</td>
+						<td>8:00</td>
+						<td>18:00</td>
+						<td>旷工</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<!-- 请假情况 -->
+		<div class="clockin" style="display: none;">
+			<div class="box">请假情况</div>
+			<div class="clockin-table">
+				<table width="100%">
+					<tr>
+						<th>申请时间</th>
+						<th>员工编号</th>
+						<th>姓名</th>
+						<th>请假类型</th>
+						<th>开始时间</th>
+						<th>结束时间</th>
+						<th>处理结果</th>
+					</tr>
+					<tr align="center">
+						<td>2018-4-16</td>
+						<td>4</td>
+						<td>tanwt</td>
+						<td>病假</td>
+						<td>2018-5-01</td>
+						<td>2018-6-01</td>
+						<td>驳回</td>
+					</tr>
+					<tr align="center">
+						<td>2018-4-16</td>
+						<td>4</td>
+						<td>tanwt</td>
+						<td>病假</td>
+						<td>2018-5-01</td>
+						<td>2018-6-01</td>
+						<td>驳回</td>
+					</tr>
+					<tr align="center">
+						<td>2018-4-16</td>
+						<td>4</td>
+						<td>tanwt</td>
+						<td>病假</td>
+						<td>2018-5-01</td>
+						<td>2018-6-01</td>
+						<td>驳回</td>
+					</tr>
+					<tr align="center">
+						<td>2018-4-16</td>
+						<td>4</td>
+						<td>tanwt</td>
+						<td>病假</td>
+						<td>2018-5-01</td>
+						<td>2018-6-01</td>
+						<td>驳回</td>
+					</tr>
+					<tr align="center">
+						<td>2018-4-16</td>
+						<td>4</td>
+						<td>tanwt</td>
+						<td>病假</td>
+						<td>2018-5-01</td>
+						<td>2018-6-01</td>
+						<td>驳回</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<!-- 出差情况 -->
+		<div class="clockin" style="display: none;">
+			<div class="box">出差情况</div>
+			<div class="clockin-table">
+				<table width="100%">
+					<tr>
+						<th>申请时间</th>
+						<th>员工编号</th>
+						<th>姓名</th>
+						<th>出差地点</th>
+						<th>开始时间</th>
+						<th>结束时间</th>
+						<th>处理结果</th>
+					</tr>
+					<tr align="center">
+						<td>2018-4-17</td>
+						<td>4</td>
+						<td>tanwt</td>
+						<td>上海	</td>
+						<td>2018-5-01</td>
+						<td>2</td>
+						<td>通过</td>
+					</tr>
+					<tr align="center">
+						<td>2018-4-17</td>
+						<td>4</td>
+						<td>tanwt</td>
+						<td>上海	</td>
+						<td>2018-5-01</td>
+						<td>2</td>
+						<td>通过</td>
+					</tr>
+					<tr align="center">
+						<td>2018-4-17</td>
+						<td>4</td>
+						<td>tanwt</td>
+						<td>上海	</td>
+						<td>2018-5-01</td>
+						<td>2</td>
+						<td>通过</td>
+					</tr>
+					<tr align="center">
+						<td>2018-4-17</td>
+						<td>4</td>
+						<td>tanwt</td>
+						<td>上海	</td>
+						<td>2018-5-01</td>
+						<td>2</td>
+						<td>通过</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<!-- 请假申请 -->
+	<div class="leavein" style="display: none;">
+		<div class="box">请假审核</div>
+		<div class="leavein_con">
+			<a href="javascript:void(0);">2-admin 2018-5-8日 事假申请</a><br>
+			<a href="javascript:void(0);">2-admin 2018-5-8日 事假申请</a><br>
+			<a href="javascript:void(0);">2-admin 2018-5-8日 事假申请</a><br>
+			<a href="javascript:void(0);">2-admin 2018-5-8日 事假申请</a><br>
+		</div>
+	</div>
+	<div class="leavein" style="display: none;">
+		<div class="box">出差审核</div>
+		<div class="leavein_con">
+			<a href="javascript:void(0);">2-admin 2018-5-8日 北京出差申请</a><br>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>
